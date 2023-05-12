@@ -1,0 +1,10 @@
+The time complexity of the given code is O(2^N), where N is the number of elements in the input vector nums. 
+This is because the code generates all possible subsets of nums. 
+For each element in nums, the code has two recursive calls: one including the current element and one without the current element. As a result, the number of recursive calls doubles with each element, leading to a total of 2^N recursive calls.
+
+The space complexity of the code is O(N), 
+where N is the number of elements in the input vector nums. 
+This is because the code uses additional space to store the subsets in the ans vector and the available numbers in the availNums vector. 
+The size of these vectors can be at most N, as it depends on the number of elements in nums. 
+The recursion depth is also at most N, as the code goes through each element of nums in the recursive calls. 
+Hence, the overall space complexity is O(N).
