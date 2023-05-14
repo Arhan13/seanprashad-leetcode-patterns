@@ -1,0 +1,9 @@
+
+The time complexity of the given code is O(4^(N^2)), where N is the value of the matrix size. The code uses backtracking to explore all possible paths in the maze. 
+At each cell, it has four recursive calls corresponding to the four possible directions (up, down, left, right). 
+Since the maze has N^2 cells, the total number of recursive calls can be as large as 4^(N^2) in the worst case.
+
+The space complexity of the code is O(N^2) due to the recursion stack. 
+The maximum depth of recursion is N^2, as the code explores all cells of the matrix. 
+Additionally, the ans vector stores the valid paths, which can have a maximum size of N^2 in the worst case. 
+Therefore, the overall space complexity is O(N^2).
