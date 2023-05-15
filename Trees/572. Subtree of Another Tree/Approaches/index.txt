@@ -1,0 +1,3 @@
+Approach 1: Depth First Search
+Approach 2: String Matching
+Approach 3: Tree Hash
