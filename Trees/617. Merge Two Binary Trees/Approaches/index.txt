@@ -1,0 +1,2 @@
+Approach #1 Using Recursion [Accepted]
+Approach #2 Iterative Method [Accepted]
