@@ -1,0 +1,20 @@
+
+The time complexity of the given code can be analyzed as follows:
+
+The dfs function is a recursive function that explores all possible combinations of letters for the given digits string. Let's assume the length of the digits string is n.
+
+The base case of the dfs function checks if path has reached the same length as digits (i.e., path.size() == digits.size()). In this case, it appends path to the ans vector. The time complexity of this step is O(1) since it performs a constant-time operation.
+
+In the recursive case, the function iterates over all the letters mapped for the current digit (mapper[digits[index]]). The number of letters mapped to each digit is typically limited (maximum of 4 in this case), so we can consider it as a constant.
+
+For each letter, the function performs the following operations:
+
+path.push_back(x): This operation takes constant time, O(1).
+Recursive call: The dfs function is called recursively with an incremented index (index+1). The worst-case scenario is when index reaches n-1, resulting in n recursive calls.
+After the recursive call, the function backtracks by removing the last character from path using path.pop_back(). This operation takes constant time, O(1).
+
+Considering the above steps, we can determine the overall time complexity as follows:
+
+In the worst case, each digit in the digits string is mapped to a maximum of 4 letters. Since the dfs function is called for each letter, the number of recursive calls will be at most 4^n. However, the actual number of recursive calls will depend on the structure of the input digits and the possible letter mappings.
+
+Therefore, the time complexity of the given code is O(4^n), where n is the length of the digits string.
