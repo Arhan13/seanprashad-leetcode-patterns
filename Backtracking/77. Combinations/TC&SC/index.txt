@@ -1,0 +1,13 @@
+The time and space complexity of the given code are as follows:
+
+Time Complexity:
+The backtracking algorithm generates all possible combinations of size k from the numbers 1 to n. The number of combinations is given by the binomial coefficient C(n, k), which is equal to n! / (k! * (n-k)!). Therefore, the time complexity is O(C(n, k)).
+
+Space Complexity:
+The space complexity is determined by the number of valid combinations stored in the output vector ans. The total number of combinations is C(n, k), so the space complexity is O(C(n, k)) to store all the combinations.
+
+In addition to the output vector ans, the space complexity also includes the space used by the recursive call stack during the backtracking process. Since the depth of the recursion is limited to k, the space complexity due to the recursion is O(k).
+
+Therefore, the overall space complexity is O(C(n, k) + k).
+
+Note: The binomial coefficient C(n, k) can be large, so the space and time complexity can grow exponentially with respect to n and k.

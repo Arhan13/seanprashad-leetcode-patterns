@@ -11,6 +11,8 @@
         "vector": "cpp",
         "iosfwd": "cpp",
         "iostream": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "variant": "cpp",
+        "chrono": "cpp"
     }
 }
