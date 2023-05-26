@@ -1,3 +1,17 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class TreeNode
+{
+public:
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
 class Solution
 {
 public:
@@ -27,4 +41,33 @@ public:
         newNode->right = mergeTrees(root1->right, root2->right);
         return newNode;
     }
+    void inorderTraversal(TreeNode *root)
+    {
+        if (root)
+        {
+            inorderTraversal(root->left);
+            cout << root->val << " ";
+            inorderTraversal(root->right);
+        }
+    }
 };
+
+int main()
+{
+    Solution s;
+    TreeNode *root1 = new TreeNode(1);
+    root1->left = new TreeNode(3);
+    root1->right = new TreeNode(2);
+    root1->left->left = new TreeNode(5);
+    TreeNode *root2 = new TreeNode(2);
+    root2->left = new TreeNode(1);
+    root2->right = new TreeNode(3);
+    root2->left->right = new TreeNode(4);
+    root2->right->right = new TreeNode(7);
+    TreeNode *mergedTree = s.mergeTrees(root1, root2);
+    // print the merged tree using inorder traversal
+    cout << "Inorder traversal of the merged tree: ";
+    s.inorderTraversal(mergedTree);
+    cout << endl;
+    return 0;
+}

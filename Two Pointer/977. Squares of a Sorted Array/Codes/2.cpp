@@ -1,4 +1,8 @@
 // https://leetcode.com/problems/squares-of-a-sorted-array/submissions/957292767/
+#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+using namespace std;
 class Solution
 {
 public:
@@ -30,3 +34,16 @@ public:
         return ans;
     }
 };
+
+int main()
+{
+    Solution s;
+    vector<int> nums = {-4, -1, 0, 3, 10};
+    vector<int> sortedSquares = s.sortedSquares(nums);
+    for (auto x : sortedSquares)
+    {
+        cout << x << " ";
+    }
+    cout << endl;
+    return 0;
+}

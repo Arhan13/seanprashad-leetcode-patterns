@@ -1,0 +1,19 @@
+The time and space complexity of the given code can be analyzed as follows:
+
+The dfs function generates all possible permutations of the given nums vector using backtracking. For each element in nums, it explores all possible choices by recursively calling itself and adding elements to the path vector.
+
+Let's denote n as the length of the nums vector.
+
+Time Complexity:
+
+The number of permutations of n elements is n! (n factorial), as each permutation is a unique arrangement of the elements.
+The dfs function is called for each element in nums, resulting in n recursive calls.
+Within each recursive call, the loop iterates over the nums vector, which has n elements.
+Hence, the time complexity of the code is O(n * n!).
+Space Complexity:
+
+The ans vector stores all the generated permutations, which can have a maximum of n! permutations.
+The path vector stores the current path during the recursive backtracking process, which can have a maximum length of n.
+The recursion depth can be at most n when all elements are added to the path vector.
+Therefore, the space complexity of the code is O(n * n!) for the ans vector and O(n) for the recursion stack.
+It's important to note that the space complexity for the ans vector dominates the space usage, as it grows exponentially with the input size. The time complexity also increases factorially due to the number of permutations being generated.
