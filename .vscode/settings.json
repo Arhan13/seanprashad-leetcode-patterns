@@ -13,6 +13,8 @@
         "iostream": "cpp",
         "ios": "cpp",
         "variant": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp"
     }
 }
