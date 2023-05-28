@@ -1,0 +1,3 @@
+The time complexity of the isValidBST function is O(n), where n is the number of nodes in the binary tree. This is because we are visiting each node exactly once in the worst case.
+
+The space complexity of the isValidBST function is O(n), where n is the number of nodes in the binary tree. This is because we are using the call stack to store the recursive calls, and in the worst case, the call stack will have n frames, one for each node in the tree.
