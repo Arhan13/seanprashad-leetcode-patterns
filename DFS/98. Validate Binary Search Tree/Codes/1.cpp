@@ -16,10 +16,12 @@ class Solution
 public:
     bool dfs(TreeNode *root, long long min, long long max)
     {
+        // NULL root is a valid BST
         if (!root)
         {
             return true;
         }
+        // Standard BST range check
         if (!(min < root->val && root->val < max))
         {
             return false;
