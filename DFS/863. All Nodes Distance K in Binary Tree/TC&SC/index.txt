@@ -1,0 +1,3 @@
+The space complexity of the given code is O(n), where n is the number of nodes in the binary tree. This is because we are using an unordered_map and a set to store the parent-child mapping and visited nodes respectively, and the size of these data structures can be at most n.
+
+The time complexity of the given code is O(n), where n is the number of nodes in the binary tree. This is because we are visiting each node in the tree exactly once, and for each node, we are performing constant time operations (inserting into the set, accessing the parent node from the map, etc.). Therefore, the overall time complexity is linear in the number of nodes in the tree.
