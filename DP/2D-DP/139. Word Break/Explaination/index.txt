@@ -1,0 +1,18 @@
+The given code uses the unbounded knapsack pattern to solve the word break problem. The unbounded knapsack pattern is used when we have to find the maximum or minimum value that can be obtained by selecting items from a given set of items, where the same item can be selected multiple times.
+
+In the word break problem, we are given a string s and a dictionary of words wordDict. We have to determine if we can break the string s into words from the dictionary wordDict. We can use the unbounded knapsack pattern to solve this problem as follows:
+
+We start with the first character of the string s and check if it is a word in the dictionary wordDict. If it is, we move to the next character and repeat the process.
+If the current substring is not a word in the dictionary wordDict, we try to break it into smaller substrings and check if each of the smaller substrings is a word in the dictionary wordDict. We can do this recursively for each smaller substring.
+We memoize the results of previous computations to avoid redundant computations.
+The unboundedKnapsack function in the given code implements the above approach using recursion and memoization. The function takes the input string s, the dictionary of words wordDict, the current index currentIndex in the string s, and a memoization vector memo as input. The memoization vector memo stores the results of previous computations for each index in the string s.
+
+The function first checks if the current index currentIndex is at the end of the string s. If it is, it returns true, indicating that the string s can be broken into words from the dictionary wordDict.
+
+If the result for the current index currentIndex is already memoized in the memoization vector memo, the function returns the memoized result.
+
+If the result for the current index currentIndex is not memoized, the function tries to break the current substring into smaller substrings and checks if each of the smaller substrings is a word in the dictionary wordDict. It does this by iterating over all possible substrings starting from the current index currentIndex and checking if each substring is a word in the dictionary wordDict. If a substring is a word in the dictionary wordDict, the function recursively calls itself with the next index in the string s and the updated memoization vector memo. If the recursive call returns true, the function memoizes the result for the current index currentIndex in the memoization vector memo and returns true.
+
+If none of the substrings starting from the current index currentIndex can be broken into words from the dictionary wordDict, the function memoizes the result for the current index currentIndex in the memoization vector memo and returns false.
+
+The wordBreak function in the given code calls the unboundedKnapsack function with the input string s, the dictionary of words wordDict, the starting index 0, and a memoization vector memo initialized with -1. It returns the result of the unboundedKnapsack function for the starting index 0.
