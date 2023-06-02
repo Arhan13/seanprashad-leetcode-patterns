@@ -1,0 +1,13 @@
+This code is a solution to the LeetCode problem 322. Coin Change. The problem statement is as follows:
+
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+The solution uses dynamic programming to solve the problem. It defines a recursive function unboundKnapsack that takes in the vector of coins, the current index of the coin being considered, the current amount of money being considered, and a memoization table to store previously computed values. The function returns the minimum number of coins required to make up the current amount of money.
+
+The function first checks if the current amount of money is 0, in which case it returns 0. If the current index of the coin being considered is less than or equal to 0, it returns a large value (INT_MAX - 1) to indicate that it is not possible to make up the current amount of money with the given coins. If the value for the current index and amount is already present in the memoization table, it returns that value.
+
+If the current coin can be included in the solution, the function recursively calls itself with the same coin and the remaining amount of money after subtracting the value of the current coin. It also recursively calls itself with the next coin and the same amount of money. It takes the minimum of these two values and adds 1 to it to get the minimum number of coins required to make up the current amount of money. It stores this value in the memoization table and returns it.
+
+If the current coin cannot be included in the solution, the function recursively calls itself with the next coin and the same amount of money. It stores this value in the memoization table and returns it.
+
+The coinChange function initializes the memoization table and calls the unboundKnapsack function with the given parameters. It returns -1 if the result is equal to INT_MAX - 1, indicating that it is not possible to make up the given amount of money with the given coins. Otherwise, it returns the result.
