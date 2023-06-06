@@ -102,6 +102,7 @@ public:
         {
             return memo[isBuy ? 1 : 0][currentIndex][k];
         }
+        // We do nothing
         ans = dpSolve(isBuy, currentIndex + 1, k, prices, memo);
         if (k == 0)
             return 0;
