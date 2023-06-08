@@ -1,0 +1,3 @@
+The time complexity (TC) of the given code is O(n * 2^n), where n is the length of the input string s. This is because for each character in the string, we have two choices: either to include it in the current substring or not. Therefore, the total number of possible partitions is 2^n. For each partition, we need to check if it is a palindrome, which takes O(n) time. Hence, the overall time complexity is O(n * 2^n).
+
+The space complexity (SC) of the given code is also O(n * 2^n), which is the space required to store all the possible partitions. In the worst case, when all the possible partitions are valid palindromes, the number of partitions will be 2^n, and each partition can have a length of up to n. Therefore, the total space required will be O(n * 2^n).
