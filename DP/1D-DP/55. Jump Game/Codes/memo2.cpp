@@ -1,6 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// DP Patterns - 1D DP - 55. Jump Game
+// https://leetcode.com/problems/jump-game/
+// Recurence Relation - dp[i] = dp[i+1] || dp[i+2] || ... || dp[i+nums[i]]
+// Base Case - dp[n-1] = true
+// Answer - dp[0]
+// Time Complexity - O(n^2)
+// Space Complexity - O(n)
+// Better Solution - Greedy
+// Time Complexity - O(n)
+// Space Complexity - O(1)
+
 class Solution
 {
 public:
