@@ -1,0 +1,1 @@
+This implementation uses two pointers left and right to define a sliding window. The freq_map hash map keeps track of the frequency of each character in the current window. We increment right to expand the window and add the character at index right to the freq_map. If the size of the
