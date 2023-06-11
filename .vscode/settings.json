@@ -16,6 +16,8 @@
         "chrono": "cpp",
         "__config": "cpp",
         "__nullptr": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp"
     }
 }
