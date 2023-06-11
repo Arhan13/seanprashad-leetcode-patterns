@@ -1,0 +1,4 @@
+
+For 2nd Approach
+The reason why setting matrix[0][j] and matrix[i][0] to 0 doesn't interfere with setting first_row_zero and first_col_zero to true is because we only set first_row_zero and first_col_zero to true if the first row or first column themselves contain a 0. We don't set them to true if any other row or column contains a 0.
+When we set matrix[0][j] and matrix[i][0] to 0, we are using the first row and first column to store information about which rows and columns need to be set to 0. We are not modifying the first row or first column themselves. We only modify the first row and first column later, after we have used them to store information about which rows and columns need to be set to 0.
