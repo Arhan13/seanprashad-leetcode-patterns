@@ -18,6 +18,7 @@
         "__nullptr": "cpp",
         "filesystem": "cpp",
         "complex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "regex": "cpp"
     }
 }
