@@ -1,0 +1,1 @@
+https://leetcode.com/problems/find-k-pairs-with-smallest-sums/solutions/3629729/c-solution-unleashing-the-max-heap-power-for-smallest-pair-search/

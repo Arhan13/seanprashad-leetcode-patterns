@@ -1,0 +1,13 @@
+// Approach: Using min heap
+//  1. Create a map to store the frequency of each element
+//  2. Create a min heap of size k
+//  3. Traverse the map and push the elements in the min heap
+//  4. If the size of the min heap is greater than k, then pop the top element
+//  5. At the end, the min heap will contain the k most frequent elements
+//  6. Push the elements of the min heap in the answer vector and return it
+
+// Intution : We are using min heap because we want to store the k most frequent elements
+//            and we want to store the elements in the increasing order of their frequency
+//            So, we will store the elements in the min heap and if the size of the min heap
+//            becomes greater than k, then we will pop the top element of the min heap
+//            So, at the end, the min heap will contain the k most frequent elements
