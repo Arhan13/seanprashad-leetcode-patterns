@@ -1,6 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Time complexity: O(nlogk)
+// Space complexity: O(n)
+// Approach: Using max heap
+//  1. Create a max heap of size k
+//  2. Traverse the points vector and calculate the distance of each point from the origin
+//  3. If the size of the max heap is less than k, then push the distance and the point in the max heap
+//  4. Else if the top element of the max heap is greater than the distance, then pop the top element and push the distance and the point in the max heap
+//  5. At the end, the max heap will contain the k closest points to the origin
+//  6. Push the points of the max heap in the answer vector and return it
+
+// Intution : We are using max heap because we want to store the k closest points to the origin
+//            and we want to store the points in the decreasing order of their distance from the origin
+//            So, we will store the points in the max heap and if the size of the max heap
+//            becomes greater than k, then we will pop the top element of the max heap
+//            So, at the end, the max heap will contain the k closest points to the origin
+
 class Solution
 {
 public:
@@ -8,6 +24,7 @@ public:
     {
         vector<vector<int>> ans;
         // We have min distance so we will use max heap
+        // Might make a mistake using a int instead of float
         priority_queue<pair<float, pair<int, int>>> maxH;
         for (auto x : points)
         {
