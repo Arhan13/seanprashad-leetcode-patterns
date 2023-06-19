@@ -1,0 +1,2 @@
+Alternate placing the most common letters.
+https://leetcode.com/problems/reorganize-string/solutions/972856/c-priority-queue-hash-map-easy-solution/
