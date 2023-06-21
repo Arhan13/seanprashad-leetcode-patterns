@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Space Complexity: O(n*m)
+// Time Complexity: O(n*m)
+// Graph Algorithm: DFS
+
 class Solution
 {
 public:
