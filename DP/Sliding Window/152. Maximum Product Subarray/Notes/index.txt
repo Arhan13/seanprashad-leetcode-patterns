@@ -1,0 +1,5 @@
+Alternative approaches and their complexities: Backtracking with index, Backtracking with element, Dynamic Programming
+Space and time complexity of this solution: Time complexity - O(n), Space complexity - O(1)
+Which pattern does this question come under: Sliding Window
+Similar Questions: Maximum Subarray, Longest Substring Without Repeating Characters
+One line intuition for the code written: This code finds the maximum product of a contiguous subarray within an array of integers using the sliding window technique.
