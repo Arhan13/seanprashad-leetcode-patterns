@@ -1,0 +1,11 @@
+1. Alternative approaches and their complexities:
+Backtracking with index (current approach): Time complexity - O(2^n), Space complexity - O(n)
+Backtracking with element: Time complexity - O(2^n), Space complexity - O(n)
+Dynamic Programming: Time complexity - O(n * target), Space complexity - O(n * target)
+2. Space and time complexity of this solution:
+Time complexity: O(2^n)
+Space complexity: O(n)
+3. Which pattern does this question come under:
+Backtracking
+4. One line intuition for the code written:
+This code finds all unique combinations of candidates that sum up to the given target, using backtracking with index and skipping over duplicates.

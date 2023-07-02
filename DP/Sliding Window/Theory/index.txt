@@ -1,0 +1,21 @@
+The sliding window technique is a dynamic programming optimization 
+technique that is used to reduce the space complexity of a dynamic programming 
+solution.
+
+In a typical dynamic programming solution, we store the values 
+of all subproblems in a table or array. 
+However, in some problems, we only need to keep track of a small subset of 
+the subproblems at any given time. 
+In such cases, we can use the sliding window technique to 
+avoid storing all the subproblems and reduce the space complexity of the solution.
+
+The sliding window technique works by maintaining a "window" 
+of the most recent subproblems that we need to keep track of. 
+As we move to the next subproblem, we update the window to include the 
+new subproblem and remove the oldest subproblem that is no longer needed. 
+This way, we only need to store a small subset of the subproblems at any given time, 
+and we can reduce the space complexity of the solution.
+
+The sliding window technique is commonly used in problems that involve finding 
+the maximum or minimum value of a subarray or substring, such as the maximum 
+sum subarray problem or the longest substring without repeating characters problem.
