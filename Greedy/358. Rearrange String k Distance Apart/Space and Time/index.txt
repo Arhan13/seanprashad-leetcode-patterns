@@ -1,0 +1,7 @@
+The time complexity of the given code is O(nlogn), where n is the length of the input string s.
+
+The code first creates a frequency array of size 26, which takes O(n) time. It then creates a max heap of pairs (frequency, character), which takes O(nlogn) time. The size of the heap is at most 26, so this is equivalent to O(logn) per insertion.
+
+The code then repeatedly extracts the top k elements from the heap and decrements their frequency, which takes O(klogn) time per iteration. The loop runs at most n/k times, so the total time complexity of this part is O(nlogn).
+
+Therefore, the overall time complexity of the code is O(nlogn).
