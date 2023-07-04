@@ -5,6 +5,10 @@ using namespace std;
 // Space Complexity: O(n)
 // One line explanation: We will sort the courses based on the increasing order of thier lastDay
 // and then we will use a max heap to store the courses with the longest duration on top
+// Similar questions on Leetcode:
+// 1. https://leetcode.com/problems/course-schedule-iii/
+// 2. https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/
+// 3. https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
 class Solution
 {
