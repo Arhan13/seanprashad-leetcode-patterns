@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Is this top down or bottom up?
+// This is top down
+// Why is this top down?
+// Because we are starting from the top and then going down
+
 class Solution
 {
 public:
