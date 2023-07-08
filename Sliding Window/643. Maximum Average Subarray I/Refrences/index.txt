@@ -1,0 +1,1 @@
+Refer to the code - https://leetcode.com/problems/maximum-average-subarray-i/submissions/988177081/
