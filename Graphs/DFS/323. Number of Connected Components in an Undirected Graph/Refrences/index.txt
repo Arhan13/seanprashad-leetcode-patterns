@@ -1,0 +1,2 @@
+Just iterate over all the nodes, on each node do DFS, this will make all the nodes in
+that component as visited. Now iterate over all the nodes and do DFS on each connected component
