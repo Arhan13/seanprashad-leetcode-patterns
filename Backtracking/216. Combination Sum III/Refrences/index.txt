@@ -1,0 +1,33 @@
+You can use recursion to solve this problem. Here's an example implementation in Python:
+
+```
+def combination_sum(k, n):
+    def backtrack(start, k, n, path, res):
+        if k == 0 and n == 0:
+            res.append(path)
+            return
+        if k == 0 or n == 0:
+            return
+        for i in range(start, 10):
+            if i > n:
+                break
+            backtrack(i + 1, k - 1, n - i, path + [i], res)
+
+    res = []
+    backtrack(1, k, n, [], res)
+    return res
+```
+
+This implementation uses a helper function called `backtrack` to generate all possible combinations. The function takes four arguments: `start`, `k`, `n`, `path`, and `res`. 
+
+`start` represents the starting integer for each combination. `k` represents the number of integers that need to be selected. `n` represents the remaining sum that needs to be reached. `path` is a list that stores the current combination, and `res` is a list that stores all valid combinations.
+
+The function first checks if `k` and `n` are equal to 0. If they are, it means that a valid combination has been found, and the current `path` is added to `res`.
+
+If `k` or `n` is equal to 0, it means that the current combination is invalid, and the function returns.
+
+The function then loops through all integers from `start` to 9. If the current integer is greater than `n`, it means that the remaining sum cannot be reached with the remaining integers, so the loop is broken. Otherwise, the function calls itself recursively with the updated arguments.
+
+Finally, the `combination_sum` function initializes the `res` list and calls the `backtrack` function with the initial arguments.
+
+I hope this helps! Let me know if you have any questions.
