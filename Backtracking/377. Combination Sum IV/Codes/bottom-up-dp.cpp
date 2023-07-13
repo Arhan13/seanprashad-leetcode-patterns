@@ -11,8 +11,12 @@ public:
         dp[0] = 1;
         for (int currentSum = 1; currentSum <= target; currentSum++)
         {
+            // Iterate over all the numbers in nums
+            // Because we can use the same number multiple times, we need to iterate over all the numbers in nums
             for (int j = 0; j < nums.size(); j++)
             {
+                // Recurrence relation
+                //  dp[currentSum] = dp[currentSum - nums[j]] + dp[currentSum]
                 dp[currentSum] += dp.count(currentSum - nums[j]) > 0 ? dp[currentSum - nums[j]] : 0;
             }
         }
