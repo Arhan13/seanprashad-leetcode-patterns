@@ -6,6 +6,9 @@ using namespace std;
 #define S second
 #define pb push_back
 
+// Is this top down or bottom up?
+// This is top down
+
 int lcs(string a, string b, int i, int j, vector<vector<int>> &memo)
 {
     if (i == a.size() && j == b.size())
