@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Time Complexity: O(2^n)
+// Time Complexity is O(2^n) because we have to find all the combinations of k numbers that add up to a number n, where only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+//  Space Complexity: O(2^n)
+//  Space complexity is O(2^n) because we have to store all the combinations in the answer vector.
+//  Backtracking
+//  One line intution : We have to find all the combinations of k numbers that add up to a number n, where only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+// Approach - We will use backtracking to solve this problem. We will use a recursive function to find all the combinations of k numbers that add up to a number n, where only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+
 class Solution
 {
 public:
