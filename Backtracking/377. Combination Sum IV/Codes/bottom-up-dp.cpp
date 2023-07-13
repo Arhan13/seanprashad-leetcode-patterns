@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Is this top down or bottom up DP?
+//   This is bottom up DP because we are solving the subproblems first and then using them to solve the bigger problems
+
 class Solution
 {
 public:
