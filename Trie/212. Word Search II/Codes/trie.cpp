@@ -49,14 +49,11 @@ private:
         }
         node->setEnd(word);
     }
-    TrieNode *buildTrie(vector<string> &words)
+    TrieNode *buildTrie(vector<string> &words, TrieNode *root)
     {
-        TrieNode *root = new TrieNode();
         for (string word : words)
         {
-            TrieNode *node = root;
-            // Insert the word in the root
-            insert(word, node);
+            insert(word, root);
         }
         return root;
     }
@@ -95,6 +92,7 @@ private:
         {
             dfs(board, i, j + 1, node, ans);
         }
+        board[i][j] = currentChar;
     }
 
 public:
@@ -102,6 +100,7 @@ public:
     {
         TrieNode *root = new TrieNode();
         vector<string> ans = {};
+        root = buildTrie(words, root);
         for (int i = 0; i < board.size(); i++)
         {
             for (int j = 0; j < board[0].size(); j++)
