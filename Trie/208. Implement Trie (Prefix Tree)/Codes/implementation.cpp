@@ -5,7 +5,7 @@ struct Node
 {
 
     // This an array of Node* that point to various node from a to z
-    Node *links[27];
+    Node *links[26];
     bool flag = false;
 
     // Check if the character exists in the links array
@@ -58,7 +58,7 @@ public:
             if (!node->containsKey(word[i]))
             {
                 // If the node does not contains the word[i], then we create a new node and insert it
-                node->put(word[i], new Node);
+                node->put(word[i], new Node());
             }
             // Now we need to move to the next node
             node = node->get(word[i]);
@@ -92,7 +92,7 @@ public:
             }
             node = node->get(prefix[i]);
         }
-        return node != nullptr;
+        return true;
     }
 };
 
