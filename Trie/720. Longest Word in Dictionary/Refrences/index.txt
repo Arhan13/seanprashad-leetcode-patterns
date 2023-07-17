@@ -1,0 +1,35 @@
+The issue with the current implementation is that it is not checking if all the prefixes of a word are present in the trie. In the given test case, the word "banana" is being selected as the longest word because it appears before "apple" in the input vector. However, "banana" is not a valid word in the trie because it is not a prefix of any other word in the input vector.
+
+To fix this issue, you can modify the isLongestPossibleWord function to check if all the prefixes of the possible longest word are present in the trie. Here is the modified code:
+
+Code - 
+`
+public:
+    bool isLongestPossibleWord(string currentLongestWord, TrieNode *root, string possibleLongestWord)
+    {
+        if (checkIfWordAndWordPrefixExist(possibleLongestWord, root))
+        {
+            for (int i = 1; i < possibleLongestWord.size(); i++)
+            {
+                string prefix = possibleLongestWord.substr(0, i);
+                if (!checkIfWordAndWordPrefixExist(prefix, root))
+                {
+                    return false;
+                }
+            }
+            if (currentLongestWord.size() > possibleLongestWord.size())
+            {
+                return false;
+            }
+            else if (currentLongestWord.size() < possibleLongestWord.size())
+            {
+                return true;
+            }
+            else if (currentLongestWord.size() == possibleLongestWord.size())
+            {
+                return possibleLongestWord < currentLongestWord;
+            }
+        }
+        return false;
+    }
+`
