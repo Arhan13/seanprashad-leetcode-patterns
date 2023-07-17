@@ -25,6 +25,7 @@
     "map": "cpp",
     "set": "cpp",
     "unordered_set": "cpp",
-    "__string": "cpp"
+    "__string": "cpp",
+    "queue": "cpp"
   }
 }
