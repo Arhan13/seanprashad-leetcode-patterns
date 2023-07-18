@@ -5,10 +5,10 @@ function majorityElement(nums: number[]): number {
       _map.set(num, 1);
     } else {
       const counter = _map.get(num);
-      if (counter > nums.length / 2) {
+      if (counter && counter > nums.length / 2) {
         return num;
       }
-      _map.set(num, counter + 1);
+      _map.set(num, (counter ? counter : 0) + 1);
     }
   });
   return [..._map.entries()].reduce((a, e) => (a[1] > e[1] ? a : e))[0];
