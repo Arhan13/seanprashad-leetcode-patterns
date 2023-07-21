@@ -1,0 +1,1 @@
+Refer to the following leetcode solution - https://leetcode.com/problems/number-of-days-between-two-dates/solutions/621582/c-short-simple-modular-solution/
