@@ -7,6 +7,7 @@ public:
     int deleteAndEarn(vector<int> &nums)
     {
         int n = nums.size();
+        // We needed to use freq map as the num in nums in not from 1-->nums.size() :p
         unordered_map<int, int> ump;
         int maxNumber = 0;
         // Fill the freq map
