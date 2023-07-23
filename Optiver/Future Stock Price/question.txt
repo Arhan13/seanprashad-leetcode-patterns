@@ -1,0 +1,15 @@
+Future stock prices Problem Statement: 
+Given an unordered list of future stock prices, 
+what is the maximum amount of profit that you could 
+generate from a starting amount of $1,000.00 Rules: 
+• You can trade fractional shares (e.g. if there were shares for $400.00, you could buy/sell 2.5 of them for $1,000.00) 
+• All trades occur instantaneously and do not incur any transaction costs. 
+• Shares may only be bought/sold on a date that you have a known price. 
+• Short selling is not allowed. 
+• You do not need to have a position at all times (at any time, if you cannot identify a profitable trade, you do not have to trade). 
+• Round final answer to nearest dollar. 
+• Do not assume input tuple will be sorted in any manner. 
+• Future prices will be given as a list in the following format: [Stock, Date, Price] 
+Example 1: 
+Input: CSCO,10/18/2024,41.89 AMZN, 10/10/2024,113.67 AMZN, 10/18/2024,120.5 CSCO,10/10/2024,43.12 
+Solution: Buy 8.797 AMZN @ $113.67 on 10/10/2024 and sell @ $120.5 on 10/18/2024. Profit = $60 Expected Output: 60
