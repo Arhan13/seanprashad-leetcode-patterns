@@ -7,9 +7,9 @@ using namespace std;
 
 struct Trade
 {
-    int trade_id;
-    string instrument_id;
-    string buy_sell;
+    int tradeId;
+    string instrumentId;
+    string buyOrSell;
     double price;
     int volume;
 };
@@ -29,34 +29,36 @@ public:
 
     int output_worst_trade(const string &instrument_id)
     {
-        double worst_pnl_per_lot = 0;
-        int worst_trade_id = -1;
-        for (const auto &trade : trades)
+        int worstPnlPerLot = 0;
+        int worstTradeId = -1;
+        for (Trade trade : trades)
         {
-            if (trade.instrument_id == instrument_id)
+            if (trade.instrumentId == instrument_id)
             {
-                double pnl_per_lot = (prices[instrument_id] - trade.price) * (trade.buy_sell == "BUY" ? 1 : -1) * trade.volume;
-                if (pnl_per_lot < worst_pnl_per_lot)
+                double pnlPerLot = (trade.price - prices[instrument_id]) * (trade.buyOrSell == "BUY" ? -1 : 1);
+                if (pnlPerLot < worstPnlPerLot)
                 {
-                    worst_pnl_per_lot = pnl_per_lot;
-                    worst_trade_id = trade.trade_id;
+                    worstPnlPerLot = pnlPerLot;
+                    worstTradeId = trade.tradeId;
                 }
             }
         }
-        if (worst_trade_id == -1)
+        if (worstTradeId == -1)
         {
             cout << "NO BAD TRADES" << endl;
         }
         else
         {
-            cout << worst_trade_id << endl;
+            cout << worstTradeId << endl;
         }
-        return worst_trade_id;
+        return worstTradeId;
     }
 
 private:
-    vector<Trade> trades;
+    // We need a DS for storing the prices
     unordered_map<string, double> prices;
+    // We need a DS for storing the Trades
+    vector<Trade> trades;
 };
 
 void run_pnl_calculator()
