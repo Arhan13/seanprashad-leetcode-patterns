@@ -26,6 +26,9 @@
     "set": "cpp",
     "unordered_set": "cpp",
     "__string": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp"
   }
 }
