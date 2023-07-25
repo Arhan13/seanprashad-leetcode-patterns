@@ -1,0 +1,79 @@
+Truck Positions
+A logistics company has a central software solution to track the position of their trucks. Different applications are interested in different trucks. To save bandwidth the company wants to have a central subscriber for each local office. This service will then be used by the applications in the office to get position updates.
+Your task is to implement the subscriber class. The subscriber can request information from the central server by providing the ID for a truck. The server will return the current position and will afterwards send position updates as differences as they become available. When a client subscribes to a truck the subscriber should return the current truck position. Additionally the client can request an update. In that case the client should receive all the updates for all trucks since it last requested an update. It is important that all updates arrive in the same order as they were initially sent out. Truck positions are represented in x and y coordinates.
+Have a look at the provided source to understand which inputs are provided and which outputs are expected for the Subscriber class. Also be aware that you can call the SubscribeToTruck function of the IServer interface. The input format is defined as follows:
+
+The first row contains one number N: the number of trucks
+The next N rows contain the initial coordinates of the trucks as two space-separated numbers: X_i and Y_i
+The remaining (arbitrary number of) rows each contain one of three possible commands:
+S <ClientId> <TruckId> means that client with id ClientId subscribes to the truck with ID TruckId.
+U <TruckId> <delta_x> <delta_y> means that truck with id TruckId moved by delta_x delta_y coordinates.
+R <ClientId> means that the Client with ID ClientId requests position updates.
+The ouput format is defined as follows:
+
+Clients print the answer they get as a subscription request like this
+S <ClientId> <TruckId> <x_pos> <y_pos>
+Clients print all updates they get as
+U <ClientID> <TruckId> <delta_x> <delta_y>
+Example
+Input
+
+1
+2 3
+U 0 1.5 2.5
+S 0 0
+U 0 1 2
+U 0 -0.5 -0.5
+S 1 0
+R 0
+U 0 1 1
+R 1
+Output
+
+S 0 0 3.5 5.5
+S 1 0 4 7
+U 0 1 2
+U 0 -0.5 -0.5
+U 1 1 1
+Explanation:
+
+The first line of output is produced when client with ID=0 subscribes to truck with ID=0. At that point truck with ID=0 is at (3.5, 5.5).
+The second line of output is produced when client with ID=1 subscribes to truck with ID=0. At that point the truck is at (4, 7).
+The third and fourth line of output are produced when client with ID=0 requests position updates for truck with ID=0. Since there were 2 updates after the subscription, there's one line for each update
+The fifth line of output is produced when client with ID=1 requests position updates for truck with ID=0. Since there was 1 update after the subscription, there's one line of output.
+
+
+from dataclasses import dataclass, replace
+
+@dataclass
+class TruckPosition:
+	x: float
+	y: float
+
+@dataclass
+class TruckPositionDelta:
+	truck_id: int
+	delta_x: float
+	delta_y: float
+
+class Subscriber:
+	def __init__(self, server):
+		pass
+	def process_update(self, update):
+		pass
+	def subscribe_to_truck(self, truck_id, client_id):
+		return TruckPosition(0, 0)
+	def get_updates(self, client_id):
+		return [TruckPositionDelta(0, 0, 0)]
+		
+class Server:
+	def __init__(self):
+		self.registered_trucks = set()
+		self.current_pos = {}
+		
+	def subscribe_to_truck(self, truck_id):
+		self.registered_trucks.add(truck_id)
+		return replace(self.current_pos([truck_id])
+		
+	def add_position(self, truck_id, pos):
+		self.current_pos[truck_id] = pos
