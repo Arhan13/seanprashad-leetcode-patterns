@@ -1,8 +1,9 @@
-#include <queue>
+// getting WA of first and second test case
 #include <unordered_map>
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -21,6 +22,7 @@ public:
     void process_trade(int trade_id, const string &instrument_id, const string &buy_sell, double price, int volume)
     {
         trades.push_back({trade_id, instrument_id, buy_sell, price, volume});
+        instrumentPnlQueue[instrument_id].push({(price - prices[instrument_id]) * (buy_sell == "BUY" ? -1 : 1), trade_id});
     }
 
     void process_price_update(const string &instrument_id, double price)
@@ -31,24 +33,12 @@ public:
     int output_worst_trade(const string &instrument_id)
     {
         int worstTradeId = -1;
-        if (!trades.empty())
+        if (instrumentPnlQueue.count(instrument_id) > 0 && !instrumentPnlQueue[instrument_id].empty())
         {
-            priority_queue<pair<double, int>, vector<pair<double, int>>, greater<pair<double, int>>> pq;
-            for (Trade trade : trades)
+            if (instrumentPnlQueue[instrument_id].top().first < 0)
             {
-                if (trade.instrumentId == instrument_id)
-                {
-                    double pnlPerLot = (trade.price - prices[instrument_id]) * (trade.buyOrSell == "BUY" ? -1 : 1);
-                    pq.push({pnlPerLot, trade.tradeId});
-                }
-            }
-            if (!pq.empty())
-            {
-                if (pq.top().first < 0)
-                {
-                    worstTradeId = pq.top().second;
-                    cout << worstTradeId << endl;
-                }
+                worstTradeId = instrumentPnlQueue[instrument_id].top().second;
+                cout << worstTradeId << endl;
             }
         }
         if (worstTradeId == -1)
@@ -63,6 +53,8 @@ private:
     unordered_map<string, double> prices;
     // We need a DS for storing the Trades
     vector<Trade> trades;
+    // We need a DS for storing the priority queue for each instrument ID
+    unordered_map<string, priority_queue<pair<double, int>, vector<pair<double, int>>, greater<pair<double, int>>>> instrumentPnlQueue;
 };
 
 void run_pnl_calculator()
