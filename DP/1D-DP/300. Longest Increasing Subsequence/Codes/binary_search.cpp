@@ -26,6 +26,7 @@ public:
                 temp[ind] = nums[i];
             }
         }
+        // The temp array here is not the LIS, but is only used for getting the length of LIS
         return temp.size();
     }
 };
