@@ -1,0 +1,1 @@
+Read this solution - https://leetcode.com/problems/count-number-of-bad-pairs/solutions/2388090/c-python3-hashmap-o-n/
