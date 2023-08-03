@@ -1,0 +1,10 @@
+List of DP Patterns - https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
+Sure, here are some popular dynamic programming patterns:
+- 0/1 Knapsack problem
+- Longest Common Subsequence
+- Fibonacci sequence
+- Maximum Subarray
+- Coin Change
+- Longest Increasing Subsequence
+- Edit Distance
+- Matrix Chain Multiplication
