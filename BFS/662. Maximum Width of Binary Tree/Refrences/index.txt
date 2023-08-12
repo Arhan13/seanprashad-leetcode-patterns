@@ -1,0 +1,3 @@
+Leetcode Editorial - https://leetcode.com/problems/maximum-width-of-binary-tree/editorial/
+
+Also check - https://leetcode.com/problems/maximum-width-of-binary-tree/solutions/1802311/c-bfs-easy-to-understand-full-explanation/
