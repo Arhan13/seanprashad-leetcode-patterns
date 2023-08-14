@@ -1,0 +1,1 @@
+Check these solutions - https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/solutions/857169/c-simple-backtracking-solution/
