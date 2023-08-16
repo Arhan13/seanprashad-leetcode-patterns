@@ -1,0 +1,4 @@
+It is very similar to the 340. Longest Substring with At Most K Distinct Characters, 
+hashmap and sliding window, in this question we just need to monitor the count of the number of different elements
+basically the max element's count and the rest of the elements. The count of the rest of the elements needs to be less than or equal to K
+According to this we need to calculate the maximum size of the window
