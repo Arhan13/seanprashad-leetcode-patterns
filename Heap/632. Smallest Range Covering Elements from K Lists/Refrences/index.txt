@@ -1,0 +1,1 @@
+Refer to the following article - https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/solutions/3101213/complete-handwritten-approach-dry-run/
