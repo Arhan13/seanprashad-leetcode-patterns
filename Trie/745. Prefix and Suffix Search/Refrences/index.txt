@@ -1,0 +1,1 @@
+Refer to the article - https://leetcode.com/problems/prefix-and-suffix-search/solutions/2172708/c-3-approaches-trie-hashmap-clean-and-concise/
