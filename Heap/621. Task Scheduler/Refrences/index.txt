@@ -1,0 +1,1 @@
+Refer to leetcode 358. Rearrange String K distance apart
