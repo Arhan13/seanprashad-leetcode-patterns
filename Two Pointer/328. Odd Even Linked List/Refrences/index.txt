@@ -1,0 +1,1 @@
+Refer to the following solution on LC - https://leetcode.com/problems/odd-even-linked-list/solutions/1606963/c-simplest-solution-w-explanation-one-pass/
