@@ -1,0 +1,1 @@
+Read the editorial https://leetcode.com/problems/paint-fence/editorial/?envType=study-plan-v2&envId=premium-algo-100
