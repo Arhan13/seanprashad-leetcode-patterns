@@ -26,20 +26,20 @@ public:
             return ans;
         }
         vector<vector<int>> adj(n, vector<int>());
-        vector<int> indegree(n, 0);
+        vector<int> inDegree(n, 0);
         for (vector<int> edge : edges)
         {
             // There is an undirected edge between ai and bi
             adj[edge[0]].push_back(edge[1]);
             adj[edge[1]].push_back(edge[0]);
-            indegree[edge[0]]++;
-            indegree[edge[1]]++;
+            inDegree[edge[0]]++;
+            inDegree[edge[1]]++;
         }
-        // The leaf nodes will have an indegree of 0
+        // The leaf nodes will have an inDegree of 0
         queue<int> q;
         for (int i = 0; i < n; i++)
         {
-            if (indegree[i] == 1)
+            if (inDegree[i] == 1)
             {
                 q.push(i);
             }
@@ -62,8 +62,8 @@ public:
                 remainingLeaves--;
                 for (int neighbour : adj[node])
                 {
-                    indegree[neighbour]--;
-                    if (indegree[neighbour] == 1)
+                    inDegree[neighbour]--;
+                    if (inDegree[neighbour] == 1)
                     {
                         // We push it neighbours into the queue, as these nodes
                         // are part of the next leaf level
