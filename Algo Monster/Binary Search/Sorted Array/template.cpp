@@ -9,15 +9,15 @@ int binary_search(std::vector<int> arr, int target)
     while (left <= right)
     {
         int mid = left + (right - left) / 2;
-        if (feasible(mid))
-        {
-            firstTrueIndex = mid;
-            right = mid - 1;
-        }
-        else
-        {
-            left = mid + 1;
-        }
+        // if (feasible(mid))
+        // {
+        //     firstTrueIndex = mid;
+        //     right = mid - 1;
+        // }
+        // else
+        // {
+        //     left = mid + 1;
+        // }
     }
     return firstTrueIndex;
 }
